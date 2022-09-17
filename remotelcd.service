@@ -1,0 +1,12 @@
+[Unit]
+Description=Control display brightness
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+User=piero
+Group=piero
+Environment=DISPLAY=:1
+ExecStart=/home/piero/remotelcd
+[Install]
+WantedBy=multi-user.target
